@@ -40,16 +40,13 @@ function updateCountdown() {
   }
 
   seconds.innerHTML = s < 10 ? '0' + s : s;
-  if (s === 1) {
-    seconds.nextElementSibling.innerText = 'segundo';
-  }
 }
 
 // Show spinner before countdown
 setTimeout(() => {
   loading.remove();
   countdown.style.display = 'flex';
-}, 2000);
+}, 2500);
 
 // Run every second
 setInterval(updateCountdown, 1000);
